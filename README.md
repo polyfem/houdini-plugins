@@ -52,7 +52,7 @@ In the Geometry tab, you can apply sidesets by adding them to your simulation. B
 
 The rest of the process should be pretty self-explantory if you are famiiar with polyfem.
 
-Once all of your selection are made. Simply hit the Run PolyFEM button on the main tab. This will write the json input file to the working directory and any sideset files. It will attempt to run polyfem in terminal (for mac, not tested on other platforms yet).
+Once all of your selections are made. Simply hit the Run PolyFEM button on the main tab. This will write the json input file to the working directory and any sideset files. It will attempt to run polyfem in terminal (for mac, not tested on other platforms yet).
 
 Please note that this HDA does not yet support multivolumes or volume selection. It also does not yet support interpolation related to boundary conditions. 
 
