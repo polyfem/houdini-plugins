@@ -44,6 +44,8 @@ Next, provide the hda with a working directory where it will place any necessary
 
 Next, go to the Geometry Tab. You can import geometry files the polyfem supports here. *Note only .msh is supprted for 3D meshes. It also assume that .msh files are 3D meshes (tets or hexes). .stl, .ply, and .obj are only for use as obstacles.*
 
+You can orbit, pan, and zoom in the main window by holding down the spacebar and using your mouse. 
+
 Within the geometry tab, you can apply transforms to your geometry. This can be done by entering values directly or hovering your mouse over the main view and hitting the enter key to bring up a gizmo. By clinking on the geometry that you want to move, the gizmo should snap to that geometries origin and allow you to move it. To change the gizmo to scaling, hit the Y key. To exit from this mode, hit the escape key.
 
 In the Geometry tab, you can apply sidesets by adding them to your simulation. By pressing the arrowhead button once a sideset is added to the scene, you will be taken into a mode to select either the surface faces or the points to define your sideset in the main view. You can highlight your selection and hit enter to accept that selection. To add to a selection, hold the shift key while selecting. To subsract from a selection, hold the control key. Again, always hit enter in the main view to accept your selection.
