@@ -31,6 +31,9 @@ That completes the initial setup.
 
 After that, every time you open houdini you should have access to the polyfem hda. Please note that the polyfem hda uses the other hda in the background. That is why both hdas need to be added to the otls folder. 
 
+Upgrading the HDAs:
+
+If there are versions in this repository that are newer than those you are using. You can simply replace the ones in your otls directory with the latest ones. If houdini is open, you will need to restart houdini for the change to take effect.  
 
 Using the polyfem HDA:
 
