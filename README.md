@@ -8,7 +8,7 @@ To use:
 
 First initial setup. Only has to be done once.
 
-1) Install houdini from SideFX. You will need to create a login, but the software is free to use for the purpose of this work. After installation, you will have to install the houdini license for the apprentice version. The software should guide you through. 
+1) Install houdini from SideFX. You will need to create a login, but the software is free to use for the purpose of this work. After installation, you will have to install the houdini license for the apprentice version. The software should guide you through. When given the option to install "SideFXLabs", you need to check that option. 
 
 2) On Mac (this is the only platform these have been tested on so far), open your library directory by clicking on your desktop, selecting the "Go" dropdown menu and holding the option key. In that folder, go to Preferences-> Houdini -> directory of your version of houdini (currently 19.5 for a fresh install). Inside the 19.5 directory (or your version), create a directory called "otls" if it does not already exist. If you are on another platform, you will have to create the same folder in the correct location. Note- the directory where the "otls" directory needs to be created shares a file called "houdini.env". This is an environmental file for houdini that lets you change specific settings, which can be found in the houdini documentation.   
 
