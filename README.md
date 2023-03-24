@@ -14,18 +14,18 @@ First initial setup. Only has to be done once.
 
 3) Place the two HDAs in this github into that "otls" folder. 
 
-4) Restart houdini if it is currently open.
+4) With houdin installed and running on your desktop. Select the "Windows" dropdown menu and then select "Shell". Note- this brings up terminal with a houdini environemnt and provides the ability to use is a houdini specific version of python. For more details on installing python libraries in the houdini specific version of python see the following link. http://wordpress.discretization.de/houdini/home/advanced-2/installing-and-using-scipy-in-houdini/
 
-5) Once houdini is restarted. Select the "Windows" dropdown menu and then select "Python Shell". Note- this is a houdini specific version of python.
-
-6) Enter the following commands:
+5) Enter the following commands:
 
   hython -m get-pip.py   
   hython -m pip install meshio
   
-  note that this says hython and not python. hython stands for the houdini specific version
+  Note that this says "hython" and not "python". "hython" stands for the houdini specific version
   
-7) Note the polyfem hda will check for meshio when it is used and attempt to install it, but that has note been tested rigoriously so following step 6 is necessary if that process fails. The houdini specific version of python (i.e. hython) requires the meshio library to run the polyfem hda. The code should let you know if the library has not been found when you try to use the HDA per below.
+6) Restart houdini if it is currently open.
+
+7) Note the polyfem hda will check for meshio when it is used and attempt to install it if it can not find it. However, that has not been tested rigoriously (especially on non-Mac platforms) so following step 4 is necessary if that process fails. The houdini specific version of python (i.e. hython) requires the meshio library to run the polyfem hda. The code should let you know if the library has not been found when you try to use the HDA per below.
 
 That completes the initial setup.
 
