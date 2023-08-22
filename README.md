@@ -93,7 +93,7 @@ Once all of your selections are made, simply hit the `Run PolyFEM` button on the
 Please note that this HDA does not yet support interpolation related to boundary conditions.
 
 
-
+The support of NSF Grant 2053851 is gratefully acknowlegded.
 
 
 
