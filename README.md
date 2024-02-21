@@ -11,11 +11,12 @@ The first initial setup only has to be done once.
 1. **Install Houdini**: Install Houdini from SideFX. You will need to create a login, but the software is free to use for the purpose of this work. After installation, you will have to install the Houdini license for the Apprentice version. The software should guide you through. When given the option to install "SideFXLabs", check that option. 
 
 2. **Create "otls" directory**: 
-   - **Mac**: Open your library directory by clicking on your desktop, selecting the "Go" dropdown menu and holding the option key. In that folder, go to Preferences-> Houdini -> directory of your version of Houdini (currently 19.5 for a fresh install). Inside the 19.5 directory (or your version), create a directory called "otls" if it does not already exist.    
-   - **Linux**: Houdini will have a folder in your home directory (e.g. houdini19.5). Create the "otls" directory within that directory.
-   - **Other platforms**: If the folders are not where just described, you will have to create the "otls" directory in the correct location. 
+   - **Mac**: Open your library directory by clicking on your desktop, selecting the "Go" dropdown menu and holding the option key. In that folder, go to Preferences-> Houdini -> directory of your version of Houdini (currently 20.0 for a fresh install). Inside the 20.0 directory (or your version), create a directory called "otls" if it does not already exist.    
+   - **Linux**: Houdini will have a folder in your home directory (e.g. houdini20.0). Create the "otls" directory within that directory.
+   - **Other platforms**: If the folders are not where just described, you will have to create the "otls" directory in the correct location.
+   - **Updating Houdini**: If you are updating Houdini from a previous verision to a newer version and you are using these HDAs, be sure to copy the 'otls' directory from the old version to the corresponding directory of the new verision. You will also need to rerun the setup steps below for the new version. 
 
-3. **Place the HDAs**: Place the two HDAs in this GitHub into the "otls" folder. 
+3. **Place the HDAs**: Place the HDAs in this GitHub into the "otls" folder. 
 
 4. **Set up Houdini Shell**: With Houdini installed and running on your desktop, select the "Windows" dropdown menu and then select "Shell". If you are on Linux, this should have opened an xterm window. Houdini assumes that you are using xterm as your terminal. To proceed, install xterm on your system (e.g. `sudo apt install xterm`) and try again. You may have to close and reopen Houdini.
 
@@ -32,7 +33,7 @@ The first initial setup only has to be done once.
 
 ------
 
-## Usage
+## Usage PolyFEM Node
 
 In Houdini, there are three main windows at the start. The main window is the scene view. The window to the upper right is the parameters window, and the window to the bottom right is the node network window.
 
@@ -92,9 +93,21 @@ Once all of your selections are made, simply hit the `Run PolyFEM` button on the
 
 Please note that this HDA does not yet support interpolation related to boundary conditions.
 
+------
 
+## Usage ReadPVD Node (post-processing within Houdini)
 
+Point the HDA to the PVD file for your simulation
 
+The refresh button will refresh the playbar at the bottom of the screen to correspond with the number of timesteps written in the PVD file. You can refresh while the simulation is running.
+
+Data is cached by default. You can force the cache to be cleared by hitting the clear cache button. Note: Refreshing does not clear the cache unless a new file is read.
+
+You can adjust the colors to your preference. "Auto" sets the max and mix values to the corresponding parameter's values for the current timestep. 
+
+The check box to compute the tensor principal values, vectors, etc., will perform calculations per timestep to provide outputs for the Right Cauchy-Green Stretch tensor (RCGST), the 1st PK stress tensor (PK1ST), the 2nd PK stress tensor (PK2ND), and Cauchy stress tensor (cauchy). This will reset the cache and make relvent parameters availible for selection in the color map. In addition, it will enable the the user to check a box to show normalized glyphs.
+
+Showing the glyphs provides a normalized visual of the selected tensor at each surface node. The glyphs are oriented with respect to the prinipal directions of the tensor and the relative radii represent the normalized magnitude of the corresponding principal values. Changes to this section will clear the cache so all frames reflect the updated selections.   
 
 The support of NSF Grant 2053851 is gratefully acknowlegded.
 
