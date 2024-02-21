@@ -1,6 +1,6 @@
 # houdini-plugins
 
-These are HDAs necessary to run a first attempt at a GUI for polyfem using houdini.
+These are HDAs necessary to run a first attempt at a GUI for polyfem preprocessing and postprocessing.
 
 **THIS ASSUMES YOU HAVE A COMPILED VERSION OF POLYFEM ON YOUR MACHINE**
 
